@@ -6,7 +6,7 @@
 		<img id="logo" src="Logo.png"/>
 		<div class="menu_head">
 			<a href="index.php">Головна  </a> 
-			<a href="file1.php">Автор </a> 
+			<a href="Item1.php">Автор </a> 
 			<a target="_blank" href="http://www.soft-group.com">SoftGroup </a>
 		</div>
 		<div class="text_head"><h2>SoftGroup </h2> <h3>Тестове завдання</h3></div>
