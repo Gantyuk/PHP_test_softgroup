@@ -13,7 +13,7 @@
 			<input type="text" name="N" id="" />     
 			<input type="submit" name="Perfect_number" id="faind" value="Знайти" />
 		</p>
-		</form>
+	</form>
 	 <?php
 		if(isset($_POST['N']) && !empty($_POST['N'])){
 			$n = $_POST['N'];
