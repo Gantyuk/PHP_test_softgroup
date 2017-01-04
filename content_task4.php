@@ -23,20 +23,18 @@
 			</P>
 			<P>
 				<input type="text"  name="N" id="" />
-				<br>
 				<p>
 						Кількість партій:
 				</P>
 				<p>					
 					<input type="text" name="K" id="" />
-					<br>
 					<p>
 						Матриця ai i bi:
 					</P>
-					<p><textarea name="matr" form="form1"></textarea>
-						<br>
+					<p>
+						<textarea name="matr" form="form1"></textarea>
 						<p>
-							<input type="submit" name="Perfect_number" id="faind" value="Порахувати" />
+							<input type="submit" name="Perfect_number" id="faind" value="Підрахувати" />
 						</p>
 					</p>
 				</p>
