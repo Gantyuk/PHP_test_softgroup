@@ -34,7 +34,7 @@
 					<p>
 						<textarea name="matr" form="form1"></textarea>
 						<p>
-							<input type="submit" name="Perfect_number" id="faind" value="Підрахувати" />
+							<input type="submit" name="task4" id="faind" value="Підрахувати" />
 						</p>
 					</p>
 				</p>

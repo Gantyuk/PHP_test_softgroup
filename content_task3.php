@@ -10,7 +10,7 @@
 	<form id="form1" name="form1" method="post" action="">
 		<p>
 			<input type="text" name="N" id="" />     
-			<input type="submit" name="Perfect_number" id="faind" value="Підрахувати" />
+			<input type="submit" name="task3" id="faind" value="Підрахувати" />
 			<br>
 			<i >
 				*Числа розділити пробілами

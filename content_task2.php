@@ -11,7 +11,7 @@
 	<form id="form1" name="form1" method="post" action="">
 		<p>
 			<input type="text" name="N" id="" />     
-			<input type="submit" name="Perfect_number" id="faind" value="Знайти" />
+			<input type="submit" name="task2" id="faind" value="Знайти" />
 			<br>
 			<i >
 				*Числа розділити пробілами, крапками або комами.

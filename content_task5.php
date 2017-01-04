@@ -15,7 +15,7 @@
 			<textarea name="matr" form="form1"></textarea>
 		</p>
 		<p>
-		<input type="submit" name="Perfect_number" id="faind" value="Підрахувати" />
+		<input type="submit" name="task5" id="faind" value="Підрахувати" />
 		</p>			
 	</form>
 	<?php
@@ -38,8 +38,5 @@
 				echo "$vid[$i] ";
 			}
 		}
-	?>
-		
-		
-	
+	?>	
 </div>
