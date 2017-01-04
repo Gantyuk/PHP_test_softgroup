@@ -18,35 +18,80 @@
 	</p>
 	<form id="form1" name="form1" method="post" action="">
 		<p>
-			<input type="text" name="N" id="" />
-			<br>
 			<p>
-				<input type="text" name="K" id="" />
+				Кількість днів:
+			</P>
+			<P>
+				<input type="text"  name="N" id="" />
 				<br>
-				<p><textarea name="matr" form="form1"></textarea>
+				<p>
+						Кількість партій:
+				</P>
+				<p>					
+					<input type="text" name="K" id="" />
 					<br>
 					<p>
-						<input type="submit" name="Perfect_number" id="faind" value="Знайти" />
+						Матриця ai i bi:
+					</P>
+					<p><textarea name="matr" form="form1"></textarea>
+						<br>
+						<p>
+							<input type="submit" name="Perfect_number" id="faind" value="Порахувати" />
+						</p>
 					</p>
 				</p>
+		
 			</p>
-	
-	</p>
+		</p>
 	</form>
 	<?php
-		if(isset($_POST['N']) && !empty($_POST['N']) && isset($_POST['K']) && !empty($_POST['K'])){
+		if(isset($_POST['N']) && !empty($_POST['N']) && isset($_POST['K']) && !empty($_POST['K']) && isset($_POST['matr']) && !empty($_POST['matr'])){
 			$n = $_POST['N'];
-			for ($i = 1; $i <= $n; $i++) {
-				$sum = 0;
-				for ($j = 1; $j < $i; $j++) {
-					if ($i % $j == 0){
-						$sum = $sum + $j;
-						if ($sum == $i){
-							echo "Досконале число : $sum <br>";
+			$k = $_POST['K'];
+			$mat = split("\n",$_POST['matr']); 
+			for ($i = 0; $i < $k; $i++){
+				$mat[$i] = split(" ",$mat[$i]);
+				for ($j = 2; $j < $n; $j++){
+					if (($j*$mat[$i][1]+$mat[$i][0])<$n){
+						array_push(	$mat[$i],($j*$mat[$i][1]+$mat[$i][0])); 
+					} else break;
+				}
+				$mat[$i][1]=$mat[$i][1]+$mat[$i][0];
+			}
+			$vix[] = 6;
+			array_push($vix,$vix[0]+1);
+			for ($j = 0; $j < $n; $j += 2){
+				if (($vix[$j]+7) <= $n){
+					array_push($vix,$vix[$j]+7,$vix[$j]+8);
+				}else break;
+			}
+			$rez[] = $mat[0][0];
+			$fl = 0;
+			for ($i = 0; $i < $k; $i++){
+				for ($j =0; $j < count($mat[$i]);$j++){
+					for ($g =0; $g < count($rez);$g++){
+						if ($mat[$i][$j] == $rez[$g]){
+							$fl = 1;
+							break;
 						}
 					}
+					if ($fl == 0){
+						array_push($rez,$mat[$i][$j]);
+					}	else $fl = 0;
+				}
+						
+			}
+			for ($i = 0; $i < count($rez); $i++){
+				for ($j = 0; $j < count($vix); $j++)
+				if ($rez[$i] == $vix[$j]){
+					$arr[] = $i; 	
 				}
 			}
+			for ($i = 0; $i < count($arr); $i++){
+				unset( $rez[$arr[$i]] );
+			}
+			$countt = count($rez); 
+			echo "Кількість страйків, що відбулися протягом року:$countt";
 		}
 	?>
 </div>
