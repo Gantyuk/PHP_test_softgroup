@@ -12,10 +12,10 @@
 	<form id="form1" name="form1" method="post" action="">
 		<p>
 			<input type="text" name="N" id="" />     
-			<input type="submit" name="task2" id="faind" value="Знайти" />
+			<input type="submit" name="task2" id="faind" value="Вилучити" />
 			<br>
-			<i >
-				*Числа розділити пробілами, крапками або комами.
+			<i>
+				*Слова розділити пробілами, крапками або комами.
 			</i>
 		</p>
 	</form>
@@ -33,10 +33,19 @@
 					$arr[] = $i; 	
 				}
 			}
-			for ($i = 0; $i < count($arr); $i++){
-				unset( $n[$arr[$i]] );
+			$flag = 0;
+			echo " <p> Вихідний техт:";
+			for ($i = 0; $i < count($n); $i++){
+				for ($j = 0; $j < count($arr); $j++){
+					if ($i == $arr[$j] ){
+						$flag = 1;
+					}
+				}
+				if ($flag == 0){
+					echo " $n[$i]";
+				}else $flag = 0;
 			}
-			print_r ( $n );
+			echo " </p>";
 		}
 	?>
 </div>
